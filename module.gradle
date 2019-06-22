@@ -1,4 +1,8 @@
 buildscript {
+    ext {
+        artifactory_user = pnet_artifactory_user
+        artifactory_password = pnet_artifactory_password
+    }
     repositories {
         google()
         jcenter()
