@@ -5,8 +5,8 @@ buildscript {
         maven {
             url "https://artifactory.trimble.tools/artifactory/ttm-mobile-ecosystem-maven"
             credentials {
-                username = "${artifactory_user}"
-                password = "${artifactory_password}"
+                username = "${pnet_artifactory_user}"
+                password = "${pnet_artifactory_password}"
             }
         }
     }
@@ -15,4 +15,5 @@ buildscript {
     }
 }
 
+apply plugin: com.trimble.ttm.mep.plugins.GitflowPlugin
 apply plugin: com.trimble.ttm.mep.plugins.TtmMepAndroidPlugin
