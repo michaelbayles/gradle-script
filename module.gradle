@@ -15,6 +15,5 @@ buildscript {
     }
 }
 
-version = '0.0.1-SNAPSHOT'
-
+apply plugin: com.trimble.ttm.mep.plugins.GitflowPlugin
 apply plugin: com.trimble.ttm.mep.plugins.TtmMepAndroidPlugin
