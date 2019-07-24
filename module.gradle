@@ -10,14 +10,10 @@ buildscript {
             }
         }
     }
+    dependencies {
+        classpath 'com.trimble:infrastructure-gradle-plugins-plugin:2.0.0-SNAPSHOT'
+    }
 }
 
-plugins {
-  id 'com.jfrog.artifactory' version '4.7.5'
-  id 'org.ajoberstar.reckon' version '0.11.0'
-}
-
-reckon {
-  scopeFromProp()
-  stageFromProp('alpha', 'rc', 'final')
-}
+apply plugin: com.trimble.ttm.mep.plugins.GitflowPlugin
+apply plugin: com.trimble.ttm.mep.plugins.TtmMepAndroidPlugin
